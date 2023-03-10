@@ -1,0 +1,32 @@
+*Tem que encontrar a melhor maneira de implantar Snakes no sistema do cliente para maximizar a relevância
+das peças protegidas em geral.
+*STATMENTS:
+You must plan how to lay out the available S Snakes to cover as many highly relevant components as possible.
+You can deploy each snake on the system, represented by a R × C matrix. Each snake is positioned by placing it on a cell and commanding it to slither to an adjacent cell either directly up, down, to the left, or to the right of the one just visited, until the snake reaches its total length. Snakes cannot overlap.
+
+Thanks to the wonders of the metaverse, the boundaries of maps wrap around. For example, if a snake moves out from the grid by crossing the left border, it will magically reappear on the same row of the right border. Similarly, if a snake leaves the map from the upper border, it will reappear on the same column at the bottom border; and so on.
+Some cells in the grid don’t represent components, but network switches. These are wormholes where a snake can enter and teleport to any other wormhole in the map. Passing through a wormhole counts as a single move. Multiple snakes can use the same wormhole for both entering and exiting, provided they don’t overlap their bodies before or after teleporting. Please, remember:
+• Snakes cannot overlap with other Snakes or with themselves.
+• Passing through a wormhole takes only one Snake segment.
+• A Snake cannot start from, or end, in a wormhole.
+• Multiple snakes can use the same wormhole, as long as they don’t overlap on adjacent non-wormhole cells.
+• If the head of a Snake moves beyond the western boundary of the map, it will reappear on the eastern boundary in the same row.
+• If the head of a Snake moves beyond the eastern boundary of the map, it will reappear on the western boundary in the same row.
+• If the head of a Snake moves beyond the northern boundary of the map, it will reappear on the southern boundary in the same column.
+• If the head of the Snake moves beyond the southern boundary of the map, it will reappear on the northern boundary in the same column.
+Your total score is the sum of the relevance of the cells covered by your Snakes.
+The solution is valid only if the total score is greater than 0.
+
+*Vamos colocar cobras num tabuleiro e movimentar ela para esquerda, direita, cima e baixo para encontrar
+o caminho que ela consegue mais pontos.
+
+*DP de movimentos ?
+
+*Cobras:
+-> Se move pra cima, baixo, esquerda e direita
+-> se move um total de x vezes
+-> Nao podem se sobrepor
+-> Buraco de minhoca teleporta elas para um ponto qualquer ( a gente pega o maior ponto )
+** Nao pode comecar nem terminar num buraco de minhoca
+** Várias cobras podem usar o mesmo buraco de minhoca, desde que não se sobreponham a células adjacentes que não sejam de buraco de minhoca.
+** Se a cabeça de uma cobra se mover além do limite ocidental do mapa, ela reaparecerá no limite oriental na mesma linha.
